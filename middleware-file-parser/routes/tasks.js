@@ -7,6 +7,8 @@ router
     .post('/',
         middleware('tasks.create'),
         tasksController.create)
+    .get('/',
+        tasksController.getAll)
     .get('/:id',
         middleware('tasks.getById'),
         tasksController.getById);
